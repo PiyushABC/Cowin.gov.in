@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoWin</title>
+	<link rel="stylesheet" type="text/css" href="./Cowin.css">
+	<link rel="stylesheet" type="text/css" href="./SlotBook.css">
+</head>
+<body>
+	<!--Navigation bar-->
+	<div class="topnav">
+		<a href="#home">Team</a>&nbsp;
+		<a href="#home">Webinar</a>&nbsp;
+		<a href="#home">Reading Recommendations</a>&nbsp;
+		<a href="./Cowin.html">Home</a>&nbsp;
+	</nav>
+	<!--Cowin advertisement-->
+	<nav id="advertisement">
+		<div id="adv-background">
+			<p><b>CoWin. Vacinating India for a safer future!</b></p>
+		</div>
+	</nav><br><br>
+    </div>
+    <!--Slot Book-->
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <center>
+    	Enter the month you want to book your vacination : <input type="text" id="monthInput"><br><br>
+    	<b><p id="availableMonths"></p></b>
+    	Enter the date you want to book your vacination : <input type="text" id="dateInput"><br><br>
+    	<b><p id="availableDates"></p></b>
+    	Enter your name: <input type="text" id="nameInput"><br><br>
+    	Enter your age : <input type="text" id="ageInput"><br><br>
+    	Enter the place where you live : <input type="text" id="cityInput"><br><br>
+    	<p id="info"></p>
+    	<button onclick="Check()" id="CheckButton">Check Data</button>
+    </center>
+
+    <script>
+    	let months = [1,2,3,4,5,6,7,8,9];
+		document.getElementById("availableMonths").innerHTML = "Available Month(s) : " + months[Math.floor(Math.random()*months.length)];
+
+		let dates = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+		document.getElementById("availableDates").innerHTML = "Available Date(s) : " + dates[Math.floor(Math.random()*dates.length)];
+
+		function Check(){
+			var name = document.getElementById("nameInput").value;
+			var age = Number(document.getElementById("ageInput").value);			
+			document.getElementById("info").innerHTML = "Your name : " + name + "<br>" + "Your age : " + age + "<br>" + "Succesfully registered you may close the tab";
+		}
+    </script>
+</body>
+</html>
